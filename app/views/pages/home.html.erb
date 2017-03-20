@@ -1,2 +1,3 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<% @product_categories.each do |product_category| %>
+  <img src="<%= product_category.image %>" alt="<%= product_category.name %>" width="200">
+<% end %>
