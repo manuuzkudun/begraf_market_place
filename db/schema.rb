@@ -36,6 +36,18 @@ ActiveRecord::Schema.define(version: 20170320170813) do
     t.index ["product_category_id"], name: "index_products_on_product_category_id", using: :btree
   end
 
+  create_table "shop_products", force: :cascade do |t|
+    t.integer  "shop_id"
+    t.integer  "product_id"
+    t.integer  "price"
+    t.boolean  "avalaible"
+    t.integer  "delivery_days"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["product_id"], name: "index_shop_products_on_product_id", using: :btree
+    t.index ["shop_id"], name: "index_shop_products_on_shop_id", using: :btree
+  end
+
   create_table "shops", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
@@ -46,19 +58,7 @@ ActiveRecord::Schema.define(version: 20170320170813) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "store_products", force: :cascade do |t|
-    t.integer  "shop_id"
-    t.integer  "product_id"
-    t.integer  "price"
-    t.boolean  "avalaible"
-    t.integer  "delivery_days"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.index ["product_id"], name: "index_store_products_on_product_id", using: :btree
-    t.index ["shop_id"], name: "index_store_products_on_shop_id", using: :btree
-  end
-
   add_foreign_key "products", "product_categories"
-  add_foreign_key "store_products", "products"
-  add_foreign_key "store_products", "shops"
+  add_foreign_key "shop_products", "products"
+  add_foreign_key "shop_products", "shops"
 end
