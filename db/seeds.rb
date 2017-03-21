@@ -1,5 +1,19 @@
-business_cards = ProductCategory.create name:'business_cards',
-  image_url: 'http://www.cssauthor.com/wp-content/uploads/2013/10/Simple-Business-Card-PSD-2.jpg'
+require_relative 'business_cards'
+
+business_cards = ProductCategory.create name: @business_cards_data[:name],
+  image_url: @business_cards_data[:image_url]
+
+@business_cards_data[:properties].each do |property_data|
+  property = ProductProperty.new name: property_data[:name], question: property_data[:question]
+  property.product_category = business_cards
+  property.save
+  property_data[:values].each do |value_data|
+    prop_value = PropertyValue.new value: value_data[:value], image_url: value_data[:image_url]
+    prop_value.product_property = property
+    prop_value.save
+  end
+end
+
 
 shop1 = Shop.create name: 'Awesome shop', email: 'awesome-shop@domain.com', address: 'test address',
   telephone: '697697680', nif: 'jyfjfyyu'
@@ -21,3 +35,5 @@ shop_product2 = ShopProduct.new price: 1500, avalaible: true, delivery_days: 3
 shop_product2.product = product1
 shop_product2.shop = shop2
 shop_product2.save
+
+

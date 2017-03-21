@@ -4,5 +4,6 @@ class ProductCategoriesController < ApplicationController
   end
 
   def show
+
   end
 end
