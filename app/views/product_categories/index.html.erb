@@ -1,0 +1,9 @@
+<div class="container">
+  <% @product_categories.each do |product_category| %>
+    <div class="product-category-card">
+      <%= link_to '#' do %>
+        <%= image_tag(product_category.image, height: '200') %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
