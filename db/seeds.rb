@@ -1,5 +1,5 @@
 business_cards = ProductCategory.create name:'business_cards',
-  image: 'http://www.cssauthor.com/wp-content/uploads/2013/10/Simple-Business-Card-PSD-2.jpg'
+  image_url: 'http://www.cssauthor.com/wp-content/uploads/2013/10/Simple-Business-Card-PSD-2.jpg'
 
 shop1 = Shop.create name: 'Awesome shop', email: 'awesome-shop@domain.com', address: 'test address',
   telephone: '697697680', nif: 'jyfjfyyu'
