@@ -1,0 +1,5 @@
+$("#properties-form").html("");
+$("#properties-form").html("<%= escape_javascript(render('properties_form')) %>");
+$('html, body').animate({
+     scrollTop: $("#properties-form").offset().top
+ }, 1000);

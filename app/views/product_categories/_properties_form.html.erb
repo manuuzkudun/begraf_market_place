@@ -1,0 +1,20 @@
+<h2>Como serão seus <%= @product_catecory.name.downcase %></h2>
+
+<%= form_tag do %>
+
+  <% @product_properties.each do |property| %>
+    <div class="property">
+      <h3 class="property-question"><%= property.question %></h3>
+      <div class="property-values">
+        <% property.property_values.each do |property_value| %>
+          <div class="property-value">
+            <input type="radio" name="query[<%= property.name %>]" value="<%= property_value.id %>">
+            <label><%= property_value.value %></label>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+  <input type="hidden" name="product_category" value="<%= @product_catecory.id %>">
+  <input type="submit" value="Submit" class="btn btn-primary">
+<% end %>
