@@ -1,9 +1,8 @@
 <div class="container">
   <% @product_categories.each do |product_category| %>
     <div class="product-category-card">
-      <%= link_to '#' do %>
-        <%= image_tag(product_category.image, height: '200') %>
-      <% end %>
+      <%= link_to image_tag(product_category.image, alt: product_category.name, height: 200),
+        { controller: "product_categories", action: "show", id: product_category.id, remote: true } %>
     </div>
   <% end %>
 </div>
