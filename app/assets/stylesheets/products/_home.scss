@@ -2,3 +2,11 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+.product-categories {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.product-category-card {
+  margin: 0 20px;
+}
