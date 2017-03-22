@@ -21,6 +21,14 @@ end
 
 
 business_cards = ProductCategory.first
+
+# out = []
+# business_cards.product_properties.each do |property|
+#   property.property_values.each do |prop_value|
+
+#   end
+# end
+
 shop1 = Shop.create name: 'Awesome shop', email: 'awesome-shop@domain.com', address: 'test address',
   telephone: '697697680', nif: 'jyfjfyyu'
 
