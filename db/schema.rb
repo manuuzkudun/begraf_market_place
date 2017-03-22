@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20170321162529) do
   create_table "product_categories", force: :cascade do |t|
     t.string   "name"
     t.string   "image_url"
+    t.string   "question"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -25,6 +26,7 @@ ActiveRecord::Schema.define(version: 20170321162529) do
   create_table "product_properties", force: :cascade do |t|
     t.string   "name"
     t.string   "question"
+    t.string   "show"
     t.integer  "product_category_id"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false

@@ -3,6 +3,7 @@ class CreateProductCategories < ActiveRecord::Migration[5.0]
     create_table :product_categories do |t|
       t.string :name
       t.string :image_url
+      t.string :question
 
       t.timestamps
     end

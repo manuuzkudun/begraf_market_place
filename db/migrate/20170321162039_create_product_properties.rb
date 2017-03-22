@@ -3,6 +3,7 @@ class CreateProductProperties < ActiveRecord::Migration[5.0]
     create_table :product_properties do |t|
       t.string :name
       t.string :question
+      t.string :show
       t.references :product_category, foreign_key: true, index: true
 
       t.timestamps
