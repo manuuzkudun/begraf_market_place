@@ -1,14 +1,14 @@
 <h2>Como serão seus <%= @product_catecory.name.downcase %></h2>
 
-<%= form_tag do %>
+<%= form_tag "/offers", remote: true do %>
   <% @product_properties.each do |property| %>
     <div class="property">
       <h3 class="property-question"><%= property.question %></h3>
       <div class="property-values">
         <% property.property_values.each_with_index do |property_value, index| %>
           <div class="property-value">
-            <input type="radio" name="query[<%= property.name %>]"
-            value="<%= property_value.id %>" <%= "checked" if index.zero? %> >
+            <input type="radio" name="product[<%= property.name %>]"
+            value="<%= property_value.value %>" <%= "checked" if index.zero? %> >
             <label><%= property_value.value %></label>
           </div>
         <% end %>

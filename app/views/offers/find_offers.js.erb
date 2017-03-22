@@ -1,0 +1,5 @@
+$("#product-offers").html("");
+$("#product-offers").html("<%= escape_javascript(render('offers_form')) %>");
+$('html, body').animate({
+  scrollTop: $("#product-offers").offset().top
+ }, 1000);

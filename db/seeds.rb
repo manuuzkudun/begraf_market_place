@@ -18,6 +18,7 @@ require_relative 'flyers'
   end
 end
 
+
 business_cards = ProductCategory.first
 shop1 = Shop.create name: 'Awesome shop', email: 'awesome-shop@domain.com', address: 'test address',
   telephone: '697697680', nif: 'jyfjfyyu'
@@ -25,8 +26,8 @@ shop1 = Shop.create name: 'Awesome shop', email: 'awesome-shop@domain.com', addr
 shop2 = Shop.create name: 'Lisbon print', email: 'lisbon-print@domain.com', address: 'test 2 address',
   telephone: '698897680', nif: 'jiiifjfyyu'
 
-product1 = Product.new format: 'format1', paper_type: 'paper1', quantity: 200, number_of_people: 2,
-  print_mode: 'mode 1', print_finish: 'finish 1'
+product1 = Product.new format: "90x50mm", paper_type: "Couche 300g", quantity: 100,
+  print_mode: "Cores Frente e Verso", print_finish: "Plastificação Mate e Verniz Localizado"
 product1.product_category = business_cards
 product1.save
 

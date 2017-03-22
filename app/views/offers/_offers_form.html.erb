@@ -1,0 +1,9 @@
+<div class="offer-list">
+  <% @offers.each do |offer| %>
+    <div class="offer">
+      <h4>Shop: <%= offer.shop.name %></h4>
+      <p>Price: <%= offer.price %></p>
+      <p>Deleivery: <%= offer.delivery_days %></p>
+    </div>
+  <% end %>
+</div>
