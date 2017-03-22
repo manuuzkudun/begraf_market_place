@@ -11,6 +11,17 @@
   margin: 0 20px;
 }
 
+
+.property-values-images {
+  display: flex;
+  justify-content: flex-start;
+  .property-value {
+    width: 150px;
+    margin: 0 20px;
+  }
+}
+
+
 .offer-list{
   display: flex;
   justify-content: flex-start;
