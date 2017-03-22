@@ -1,0 +1,9 @@
+<div class="property-values-text">
+  <% property.property_values.each_with_index do |property_value, index| %>
+    <div class="property-value">
+      <input type="radio" name="product[<%= property.name %>]"
+      value="<%= property_value.value %>" <%= "checked" if index.zero? %> >
+      <%= property_value.value %>
+    </div>
+  <% end %>
+</div>
