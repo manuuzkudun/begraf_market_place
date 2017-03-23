@@ -1,5 +1,7 @@
 class OffersController < ApplicationController
   def find_offers
+    pp Product.count
+    pp Product.first
     product = Product.where(product_params)
     @offers = ShopProduct.where(product: product)
     respond_to do |format|

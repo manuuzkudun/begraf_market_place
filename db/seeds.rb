@@ -1,5 +1,6 @@
 require_relative 'business_cards'
 require_relative 'flyers'
+require_relative 'seed_helper'
 
 [@business_cards_data, @flyers_data].each do |product_category|
 
@@ -19,13 +20,44 @@ require_relative 'flyers'
   end
 end
 
-business_cards = ProductCategory.first
+
+[@business_cards_data, @flyers_data].each do |product_data|
+  combinations = get_combinations(product_data)
+  property_names = product_data[:properties].map { |property| property[:name] }
+  product_values_array = get_product_values_hash(combinations, property_names)
+
+  product_category = ProductCategory.where(name: product_data[:name]).first
+
+  product_values_array.each do |product_values|
+    product = Product.new(product_values)
+    product.product_category = product_category
+    product.save
+  end
+
+end
+
 
 shop1 = Shop.create name: 'Cool shop', email: 'cool-shop@domain.com', address: 'test address',
   telephone: '697697680', nif: 'jyfjfyyu'
 
 shop2 = Shop.create name: 'Lisbon print', email: 'lisbon-print@domain.com', address: 'test 2 address',
   telephone: '698897680', nif: 'jiiifjfyyu'
+
+shop3 = Shop.create name: 'Printrus', email: 'printrus@domain.com', address: 'test 3 address',
+  telephone: '698897680', nif: 'jikghfjfyyu'
+
+
+Product.all.each do |product|
+  Shop.all.each do |shop|
+    ShopProduct.create product: product, shop: shop,
+      avalaible: true, delivery_days: rand(7), price: rand(200)
+  end
+end
+
+
+
+
+
 
 
 
