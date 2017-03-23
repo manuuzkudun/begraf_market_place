@@ -3,7 +3,7 @@
     <div class="property-value">
       <%= image_tag(property_value.image_url, alt: property_value.value, class: "img-thumbnail") %>
       <p><input type="radio" name="product[<%= property.name %>]"
-        value="<%= property_value.value %>" <%= "checked" if index.zero? %> >
+        value="<%= property_value.value %>" >
         <%= property_value.value.capitalize %>
       </p>
     </div>

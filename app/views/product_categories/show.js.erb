@@ -6,10 +6,9 @@ $('html, body').animate({
  }, 1000);
 
 
-$(".property-value > p > input[type=radio]:checked").parent().parent().addClass("selected");
-
 $(".property-value > img").click( function(event) {
   var selectedProp = $(event.target).parent();
   selectedProp.siblings().removeClass("selected");
   selectedProp.addClass("selected");
+  $(selectedProp).find("p >input[type=radio]").prop("checked", true)
 })
