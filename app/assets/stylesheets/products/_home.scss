@@ -18,6 +18,23 @@
   .property-value {
     width: 150px;
     margin: 0 20px;
+    &.selected {
+      img {
+        border: #003c72 solid 2px;
+      }
+      p {
+        background-color: #003c72;
+        color: white;
+      }
+    }
+    p {
+      padding: 5px;
+      text-align: center;
+      input[type=radio] {
+        display: none;
+      }
+    }
+
   }
 }
 

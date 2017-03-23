@@ -10,10 +10,8 @@
   </head>
   <body>
     <%= render 'shared/navbar' %>
-    <div style="margin-top: 60px;">
-      <%= render 'shared/flashes' %>
-      <%= yield %>
-    </div>
+    <%= render 'shared/flashes' %>
+    <%= yield %>
     <%= javascript_include_tag 'application' %>
   </body>
 </html>
