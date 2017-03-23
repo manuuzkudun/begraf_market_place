@@ -1,3 +1,19 @@
+<h3>This is the product you selected:</h3>
+<div class="row">
+  <div class="col-xs-3">
+    <div class="product-specifications">
+      <h4><%= @product.product_category.name %></h4>
+      <% @product.product_category.product_properties.each do |property| %>
+        <p><%= property.name %>: <%= @product[property.name] %> </p>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-xs-3">
+    <%= image_tag(@product.product_category.image_url, alt: @product.product_category.name, width: "200" ) %>
+  </div>
+</div>
+
+<h3>Choose one of the offers:</h3>
 <div class="offer-list">
   <% @offers.each do |offer| %>
     <div class="offer">

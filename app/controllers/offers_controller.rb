@@ -1,11 +1,7 @@
 class OffersController < ApplicationController
   def find_offers
-
-        puts "----------"
-        pp product_params
-        puts "----------"
-    product = Product.where(product_params)
-    @offers = ShopProduct.where(product: product)
+    @product = Product.where(product_params).first
+    @offers = ShopProduct.where(product: @product)
     respond_to do |format|
       format.js
     end
