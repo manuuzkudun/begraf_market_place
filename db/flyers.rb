@@ -20,8 +20,8 @@
       question: "Como será a impressão?",
       show: 'images',
       values: [
-        { value: "Colorida Frente e Verso (4/4 cores)", image_url: "http://placehold.it/150x150" },
-        { value: "Colorida Frente / Verso sem impressão (4/0 cores)", image_url: "http://placehold.it/150x150" }
+        { value: "Colorida Frente e Verso (4/4 cores)", image_url: "flyers/mode1.jpg" },
+        { value: "Colorida Frente / Verso sem impressão (4/0 cores)", image_url: "flyers/mode2.jpg" }
       ]
     },
     {

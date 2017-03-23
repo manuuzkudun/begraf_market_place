@@ -18,10 +18,10 @@
       question: "Qual o tipo de impressão?",
       show: 'images',
       values: [
-        { value: "Cores Frente e Verso", image_url: "http://placehold.it/150x150" },
-        { value: "Cores Frente", image_url: "http://placehold.it/150x150" },
-        { value: "Preto e Branco Frente e Verso", image_url: "http://placehold.it/150x150" },
-        { value: "Preto e Branco Frente", image_url: "http://placehold.it/150x150" }
+        { value: "Cores Frente e Verso", image_url: "business_cards/mode1.jpg" },
+        { value: "Cores Frente", image_url: "business_cards/mode2.jpg" },
+        { value: "Preto e Branco Frente e Verso", image_url: "business_cards/mode1.jpg" },
+        { value: "Preto e Branco Frente", image_url: "business_cards/mode2.jpg" }
       ]
     },
     {
@@ -49,10 +49,10 @@
       question: "Qual o acabamento desejado?",
       show: 'images',
       values: [
-        { value: "Plastificação Mate e Verniz Localizado", image_url: "http://placehold.it/150x150" },
-        { value: "Plastificação Brilho Frente e Verso", image_url: "http://placehold.it/150x150" },
-        { value: "Plastificação Brilho Frente", image_url: "http://placehold.it/150x150" },
-        { value: "Plastificação Mate Frente e Verso", image_url: "http://placehold.it/150x150" },
+        { value: "Plastificação Mate e Verniz Localizado", image_url: "business_cards/finish1.jpg" },
+        { value: "Plastificação Brilho Frente e Verso", image_url: "business_cards/finish2.jpg" },
+        { value: "Plastificação Brilho Frente", image_url: "business_cards/finish3.jpg" },
+        { value: "Plastificação Mate Frente e Verso", image_url: "business_cards/finish1.jpg" },
       ]
     }
   ]
