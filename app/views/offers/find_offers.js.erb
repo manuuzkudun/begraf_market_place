@@ -3,3 +3,9 @@ $("#product-offers").html("<%= escape_javascript(render('offers_form')) %>");
 $('html, body').animate({
   scrollTop: $("#product-offers").offset().top
  }, 1000);
+
+$("#product-find-button").hide();
+
+$("#product-form").change(function(){
+  $("#product-find-button").show();
+});
