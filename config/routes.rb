@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
 
+  get 'order_products/index'
+
+  get 'order_products/create'
+
+  get 'order_products/destroy'
+
   devise_for :users
 
   resources :product_categories, only: [:index, :show]
