@@ -1,7 +1,7 @@
 <div class="container">
 
   <!-- Product categories -->
-  <div class="product-categories">
+  <div style="margin: 60px auto; width: 80%" class="product-categories">
     <% @product_categories.each do |product_category| %>
       <div class="product-category-card">
         <%= link_to image_tag(product_category.image_url, alt: product_category.name, height: 200),
@@ -10,7 +10,7 @@
     <% end %>
   </div>
 
-  <div style="margin: 60px 0;" id="properties-form"></div>
-  <div style="margin: 60px 0;" id="product-offers"></div>
+  <div style="margin: 60px auto; width: 70%" id="properties-form"></div>
+  <div style="margin: 60px auto; width: 60%" id="product-offers"></div>
 
 </div>

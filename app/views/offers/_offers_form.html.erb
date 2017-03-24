@@ -1,6 +1,6 @@
 <h3>This is the product you selected:</h3>
 <div class="row">
-  <div class="col-xs-3">
+  <div class="col-xs-6">
     <div class="product-specifications">
       <h4><%= @product.product_category.name %></h4>
       <% @product.product_category.product_properties.each do |property| %>
@@ -8,7 +8,7 @@
       <% end %>
     </div>
   </div>
-  <div class="col-xs-3">
+  <div class="col-xs-6">
     <%= image_tag(@product.product_category.image_url, alt: @product.product_category.name, width: "200" ) %>
   </div>
 </div>
