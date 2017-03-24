@@ -1,0 +1,15 @@
+<h3 style="text-align: center;">This is the product you selected:</h3>
+<div class="row">
+  <div class="col-xs-6">
+    <div class="product-specifications">
+      <h4><%= @product.product_category.name %></h4>
+      <% @product.product_category.product_properties.each do |property| %>
+        <p><%= @product[property.name] %></p>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-xs-6">
+    <%= image_tag("http://placehold.it/300x200", alt: @product.product_category.name) %>
+    <p>Image uploader feature goes here</p>
+  </div>
+</div>

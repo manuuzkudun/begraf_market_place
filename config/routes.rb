@@ -1,14 +1,9 @@
 Rails.application.routes.draw do
 
 
-  get 'order_products/index'
-
-  get 'order_products/create'
-
-  get 'order_products/destroy'
-
   devise_for :users
 
+  resources :order_products, only: [:create, :index, :destroy]
   resources :product_categories, only: [:index, :show]
   post '/offers', to: "offers#find_offers"
   root to: 'product_categories#index'
