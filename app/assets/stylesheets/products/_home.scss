@@ -5,10 +5,23 @@
 .product-categories {
   display: flex;
   justify-content: flex-start;
+  margin: 60px auto;
+  width: 80%;
 }
 
 .product-category-card {
   margin: 0 20px;
+}
+
+
+#properties-form {
+  margin: 60px auto;
+  width: 70%;
+}
+
+#product-offers {
+  margin: 60px auto;
+  width: 60%;
 }
 
 

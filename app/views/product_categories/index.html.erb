@@ -1,16 +1,19 @@
 <div class="container">
 
-  <!-- Product categories -->
-  <div style="margin: 60px auto; width: 80%" class="product-categories">
+  <!-- Product categories section-->
+  <section class="product-categories">
     <% @product_categories.each do |product_category| %>
       <div class="product-category-card">
         <%= link_to image_tag(product_category.image_url, alt: product_category.name, height: 200),
           { controller: "product_categories", action: "show", id: product_category.id, remote: true } %>
       </div>
     <% end %>
-  </div>
+  </section>
 
-  <div style="margin: 60px auto; width: 70%" id="properties-form"></div>
-  <div style="margin: 60px auto; width: 60%" id="product-offers"></div>
+  <!-- Product properties form section-->
+  <section id="properties-form"></section>
+
+  <!-- Product offers section -->
+  <section id="product-offers"></section>
 
 </div>
