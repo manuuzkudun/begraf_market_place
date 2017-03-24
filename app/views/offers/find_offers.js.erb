@@ -1,11 +1,12 @@
 $("#product-offers").html("");
-$("#product-offers").html("<%= escape_javascript(render('offers_form')) %>");
+$("#product-offers").html("<%= escape_javascript(render('product_offers_section')) %>");
 $('html, body').animate({
   scrollTop: $("#product-offers").offset().top
  }, 1000);
 
-$("#product-find-button").hide();
-
-$("#product-form").change(function(){
-  $("#product-find-button").show();
+$(".offer").click( function(event) {
+  var offer = event.currentTarget;
+  $(offer).siblings().removeClass("offer-selected");
+  $(offer).addClass("offer-selected");
+  $(offer).find("input[type=radio]").prop("checked", true);
 });

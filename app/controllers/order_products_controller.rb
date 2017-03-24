@@ -3,6 +3,7 @@ class OrderProductsController < ApplicationController
   end
 
   def create
+
   end
 
   def destroy

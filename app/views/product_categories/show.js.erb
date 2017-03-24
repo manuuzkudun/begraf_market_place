@@ -10,5 +10,5 @@ $(".property-value > img").click( function(event) {
   var selectedProp = $(event.target).parent();
   selectedProp.siblings().removeClass("selected");
   selectedProp.addClass("selected");
-  $(selectedProp).find("p >input[type=radio]").prop("checked", true)
+  $(selectedProp).find("p >input[type=radio]").prop("checked", true);
 })
