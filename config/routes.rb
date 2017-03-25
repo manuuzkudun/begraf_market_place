@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  get 'carts/show'
+
   devise_for :users
 
   resources :order_products, only: [:create, :index, :destroy]
