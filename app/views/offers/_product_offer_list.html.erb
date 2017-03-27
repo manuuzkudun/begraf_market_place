@@ -1,4 +1,5 @@
-<h3 style="text-align: center;">Choose one of the offers:</h3>
+<h3 class="offers-list-pres">Choose one of the offers:</h3>
+
 <%= form_tag "/order_products", remote: true do %>
   <div class="offer-list">
     <% @offers.each do |offer| %>
@@ -6,7 +7,7 @@
         <h4><%= offer.shop.name %></h4>
         <p>Price: <%= offer.price %> &euro;</p>
         <p><%= offer.delivery_days %> delivery days</p>
-        <input type="radio" name="offer" value="<%= offer.id %>" >
+        <input type="radio" name="offer[id]" value="<%= offer.id %>" >
       </div>
     <% end %>
   </div>
