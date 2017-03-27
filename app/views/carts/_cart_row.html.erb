@@ -1,18 +1,21 @@
-<div class="cart-product">
+<div class="order-product">
   <div class="cart-product-property">
     <img src="http://placehold.it/50x50">
   </div>
   <div class="cart-product-property">
     <p>Product</p>
-    <p><%= shop_product.product.product_category.name %></p>
+    <p><%= order_product.shop_product.product.product_category.name %></p>
   </div>
   <div class="cart-product-property">
     <p>Deleivery days</p>
-    <p><%= shop_product.delivery_days %></p>
+    <p><%= order_product.shop_product.delivery_days %> days</p>
   </div>
   <div class="cart-product-property">
     <p>Price</p>
-    <p><%= shop_product.price %></p>
+    <p><%= order_product.shop_product.price %>&euro;</p>
   </div>
-</div>
+  <div>
+    <%= link_to "Delete", order_product, { data: { confirm: "Are you sure you wish to delete the product '#{order_product.shop_product.product.product_category.name }' from your cart?" }, class: "btn btn-danger btn-xs", method: :delete, remote: true } %>
+  </div>
 
+</div>

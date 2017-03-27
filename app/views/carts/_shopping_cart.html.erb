@@ -3,7 +3,9 @@
     There are no items in your shopping cart.  Please <%= link_to "go back", root_path %> and add some items to your cart.
   </p>
 <% else %>
+  <div class="order-product-list">
   <% @order_products.each do |order_product| %>
-    <%= render 'carts/cart_row', shop_product: order_product.shop_product %>
+    <%= render 'carts/cart_row', order_product: order_product %>
   <% end %>
+  </div>
 <% end %>

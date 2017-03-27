@@ -1,4 +1,4 @@
-<div style="margin: 40px 0;">
+<div id="flash-messages" style="margin: 40px 0;">
   <% if notice %>
     <div class="alert alert-info alert-dismissible" role="alert">
       <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -11,9 +11,13 @@
       <%= alert %>
     </div>
   <% end %>
+  <% if !flash.empty? %>
+    <% flash.each do |message_type, message| %>
+      <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+    <% end %>
+  <% end %>
 </div>
 
-<% flash.each do |message_type, message| %>
-  <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-<% end %>
+
+
 

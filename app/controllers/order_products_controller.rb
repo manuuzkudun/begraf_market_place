@@ -13,6 +13,10 @@ class OrderProductsController < ApplicationController
   end
 
   def destroy
+    @order = current_order
+    @order_product = @order.order_products.find(params[:id])
+    @order_product.destroy
+    @order_products = @order.order_products
   end
 
   private
