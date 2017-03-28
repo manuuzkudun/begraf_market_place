@@ -1,0 +1,6 @@
+<%= link_to cart_path, class: "navbar-wagon-item navbar-wagon-link" do %>
+  <div class="badge-container">
+    <i class="fa fa-shopping-cart"></i>
+    <div class="badge badge-blue"><%= current_order.order_products.size %></div>
+  </div>
+<% end %>
