@@ -1,0 +1,58 @@
+
+
+#properties-form {
+  margin: 60px auto;
+  width: 70%;
+}
+#product-form {
+  padding: 0 20px;
+}
+
+.product-form-presentation {
+  text-align: center;
+  background-color: #003c72;
+  color: white;
+  padding: 10px 0;
+  border-radius: 3px;
+  margin-bottom: 40px;
+}
+
+.property {
+
+}
+
+.property-question {
+
+}
+
+.property-values-images {
+  display: flex;
+  justify-content: flex-start;
+  .property-value {
+    width: 150px;
+    margin: 0 20px;
+    &.selected {
+      img {
+        border: #003c72 solid 2px;
+      }
+      p {
+        background-color: #003c72;
+        color: white;
+      }
+    }
+    p {
+      padding: 5px;
+      text-align: center;
+      input[type=radio] {
+        display: none;
+      }
+    }
+
+  }
+}
+
+.product-form-find {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}

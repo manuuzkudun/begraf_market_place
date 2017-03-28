@@ -1,7 +1,7 @@
 <div class="container">
 
   <!-- Product categories section-->
-  <section class="product-categories">
+  <section id="product-categories">
     <% @product_categories.each do |product_category| %>
       <div class="product-category-card">
         <%= link_to image_tag(product_category.image_url, alt: product_category.name, height: 200),

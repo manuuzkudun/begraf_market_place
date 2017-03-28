@@ -1,0 +1,10 @@
+.order-product {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 20px 0;
+  .cart-product-property {
+    text-align: center;
+    margin: 0 20px;
+  }
+}
