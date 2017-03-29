@@ -1,4 +1,6 @@
-$("#properties-form").html("");
-$("#product-offers").html("");
-$("#shopping-cart-notify").html("<%= escape_javascript(render 'shared/shopping_cart_notify') %>");
-$("#flash-messages").html("<%= escape_javascript(render 'shared/flashes') %>");
+$("#image-upload-form").html("<%= escape_javascript(render 'order_products/image_upload_form') %>");
+$('html, body').animate({
+  scrollTop: $("#image-upload-form").offset().top
+ }, 1000);
+
+$("#upload-image-button").hide();

@@ -1,8 +1,11 @@
 $("#product-offers").html("");
-$("#product-offers").html("<%= escape_javascript(render('product_offers_section')) %>");
+$("#image-upload-form").html("");
+$("#product-offers").html("<%= escape_javascript(render('product_offers')) %>");
 $('html, body').animate({
   scrollTop: $("#product-offers").offset().top
  }, 1000);
+
+$("#product-find-button").hide();
 
 $(".offer").click( function(event) {
   var offer = event.currentTarget;

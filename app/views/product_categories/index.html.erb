@@ -4,16 +4,14 @@
   <section id="product-categories">
     <% @product_categories.each do |product_category| %>
       <div class="product-category-card">
-        <%= link_to image_tag(product_category.image_url, alt: product_category.name, height: 200),
+        <%= link_to image_tag(product_category.image_url, alt: product_category.name, height: 150),
           { controller: "product_categories", action: "show", id: product_category.id, remote: true } %>
       </div>
     <% end %>
   </section>
 
-  <!-- Product properties form section-->
   <section id="properties-form"></section>
-
-  <!-- Product offers section -->
   <section id="product-offers"></section>
+  <section id="image-upload-form"></section>
 
 </div>

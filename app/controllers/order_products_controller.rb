@@ -4,12 +4,7 @@ class OrderProductsController < ApplicationController
   def create
     @order = current_order
     @order_product = OrderProduct.create order: @order, shop_product: get_shop_product
-    # Here when order is save updates the total price
     session[:order_id] = @order.id
-    flash[:success] = "#{get_shop_product.product.product_category.name} added to the shopping cart"
-    respond_to do |format|
-      format.js
-    end
   end
 
   def destroy
