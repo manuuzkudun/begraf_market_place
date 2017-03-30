@@ -14,3 +14,11 @@
     <p>Image uploader feature goes here</p>
   </div>
 </div>
+
+
+
+<%= simple_form_for @order_product, method: :patch  do |f| %>
+  <%= f.input :image %>
+  <%= f.input :image_cache, as: :hidden %>
+  <%= f.submit %>
+<% end %>

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :order_products, only: [:create, :index, :destroy]
+  resources :order_products, only: [:create, :index, :destroy, :update]
   resources :product_categories, only: [:index, :show]
   resource :cart, only: [:show]
   post '/offers', to: "offers#find_offers"
