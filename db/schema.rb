@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20170325181606) do
   create_table "order_products", force: :cascade do |t|
     t.integer  "shop_product_id"
     t.integer  "order_id"
+    t.string   "image"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.index ["order_id"], name: "index_order_products_on_order_id", using: :btree
