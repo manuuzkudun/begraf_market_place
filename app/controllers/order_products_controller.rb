@@ -36,4 +36,5 @@ class OrderProductsController < ApplicationController
     params.require(:order_product).permit(:image, :image_cache)
   end
 
+
 end

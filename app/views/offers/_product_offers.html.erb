@@ -7,6 +7,11 @@
         <h4 class="offer-shop"><%= offer.shop.name %></h4>
         <p class="offer-price"><%= offer.price %> &euro;</p>
         <p class="offer-delivery"><%= offer.delivery_days %> days</p>
+        <div class="offer-stars">
+          <% (1..5).to_a.sample.times do %>
+            <i class="fa fa-star" aria-hidden="true"></i>
+          <% end %>
+        </div>
         <input type="radio" name="offer[id]" value="<%= offer.id %>" >
       </div>
     <% end %>
