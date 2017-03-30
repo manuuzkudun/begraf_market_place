@@ -1,0 +1,29 @@
+p {
+  color: gray;
+  font-weight: 300;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+.section-heading {
+  text-align: center;
+  color: #006ed2;
+  padding: 10px 0;
+  border-radius: 3px;
+  margin-bottom: 40px;
+  font-weight: 300;
+  font-size: 32px;
+}
+
+.next-section-button {
+  display:flex;
+  justify-content: center;
+  margin: 40px 0;
+}

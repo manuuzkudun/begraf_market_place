@@ -1,4 +1,4 @@
-<h3 class="product-form-presentation"><%= @product_catecory.question %></h3>
+<h3 class="section-heading"><%= @product_catecory.question %></h3>
 
 <%= form_tag "/offers", remote: true, id: "product-form" do %>
   <% @product_properties.each do |property| %>
@@ -11,8 +11,10 @@
       <% end %>
     </div>
   <% end %>
-  <div class="product-form-find">
-    <input type="hidden" name="product_category" value="<%= @product_catecory.id %>">
-    <input id= "product-find-button" type="submit" value="Select a shop" class="btn btn-primary">
+  <input type="hidden" name="product_category" value="<%= @product_catecory.id %>">
+
+  <div class="next-section-button">
+    <input id= "product-find-button" type="submit" value="Select a shop" class="btn btn-success">
   </div>
+
 <% end %>

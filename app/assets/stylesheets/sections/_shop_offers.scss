@@ -3,17 +3,6 @@
   width: 60%;
 }
 
-.offers-list-pres {
-  text-align: center;
-  color: #006ed2;
-  padding: 10px 0;
-  border-radius: 3px;
-  margin-bottom: 40px;
-  font-weight: 300;
-    font-weight: 300;
-  font-size: 32px;
-}
-
 
 .offer-list{
   display: flex;
@@ -28,6 +17,25 @@
   border-radius: 3px;
   input {
     display: none;
+  }
+  .offer-shop {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+  }
+  .offer-price {
+    background-color: #006ed2;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    border-radius: 3px;
+  }
+  .offer-delivery {
+    background-color: #003c72;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    border-radius: 3px;
   }
 }
 
