@@ -1,24 +1,10 @@
 <h3 class="section-heading">Add a image file</h3>
-<div class="row">
-  <div class="col-xs-6">
-    <div class="product-specifications">
-      <% @product = @order_product.shop_product.product %>
-      <h4><%= @product.product_category.name %></h4>
-      <% @product.product_category.product_properties.each do |property| %>
-        <p><%= @product[property.name] %></p>
-      <% end %>
+<div style="display: flex; justify-content: center;">
+  <%= simple_form_for @order_product, method: :patch  do |f| %>
+    <%= f.input_field :image, input_html: { class: "btn btn-primary" } %>
+    <%= f.input_field :image_cache, as: :hidden %>
+    <div class="next-section-button">
+      <%= f.submit "Add to cart", class: "btn btn-success" %>
     </div>
-  </div>
-  <div class="col-xs-6">
-    <%= image_tag("http://placehold.it/300x200", alt: @product.product_category.name) %>
-    <p>Image uploader feature goes here</p>
-  </div>
+  <% end %>
 </div>
-
-
-
-<%= simple_form_for @order_product, method: :patch  do |f| %>
-  <%= f.input :image %>
-  <%= f.input :image_cache, as: :hidden %>
-  <%= f.submit %>
-<% end %>
