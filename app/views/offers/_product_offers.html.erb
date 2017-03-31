@@ -5,7 +5,7 @@
     <% @offers.each do |offer| %>
       <div class="offer">
         <h4 class="offer-shop"><%= offer.shop.name %></h4>
-        <p class="offer-price"><%= offer.price %> &euro;</p>
+        <p class="offer-price"><%= humanized_money_with_symbol(offer.price) %></p>
         <p class="offer-delivery"><%= offer.delivery_days %> days</p>
         <div class="offer-stars">
           <% (1..5).to_a.sample.times do %>

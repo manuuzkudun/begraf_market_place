@@ -1,7 +1,7 @@
 @banners_data =
 {
   name: "Banners",
-  image_url: "http://www.1800printing.com/images/product/rollup96.jpg",
+  image_url: "https://res.cloudinary.com/dai3j9qtc/image/upload/v1490951122/banners.jpg",
   question: "Como serão seus banners?",
   properties: [
     {

@@ -19,8 +19,10 @@ ActiveRecord::Schema.define(version: 20170331081409) do
     t.integer  "shop_product_id"
     t.integer  "order_id"
     t.string   "image"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.integer  "price_cents",     default: 0, null: false
+    t.integer  "delivery_days"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.index ["order_id"], name: "index_order_products_on_order_id", using: :btree
     t.index ["shop_product_id"], name: "index_order_products_on_shop_product_id", using: :btree
   end

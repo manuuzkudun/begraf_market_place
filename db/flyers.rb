@@ -1,7 +1,7 @@
 @flyers_data =
 {
   name: "Panfletos",
-  image_url: "http://www.iday.es/wp-content/uploads/2016/03/tipos-flyers.png",
+  image_url: "https://res.cloudinary.com/dai3j9qtc/image/upload/v1490951066/panfletos.jpg",
   question: "Como serão seus Panfletos?",
   properties: [
     {

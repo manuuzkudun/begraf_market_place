@@ -13,7 +13,7 @@
         <% end %>
       </div>
       <p class="offer-delivery"><%= shop_product.delivery_days %> days</p>
-      <p class="offer-price"><%= shop_product.price %>&euro;</p>
+      <p class="offer-price"><%= humanized_money_with_symbol(shop_product.price) %></p>
   </div>
   <div class="cart-product-property">
     <% shop_product.product.product_category.product_properties.each do |property| %>

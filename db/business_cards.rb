@@ -1,7 +1,7 @@
 @business_cards_data =
 {
   name: "Cartões de visita",
-  image_url: "http://www.cssauthor.com/wp-content/uploads/2013/10/Simple-Business-Card-PSD-2.jpg",
+  image_url: "https://res.cloudinary.com/dai3j9qtc/image/upload/v1490951018/cartao.jpg",
   question: "Como serão seus Cartões de Visita?",
   properties: [
     {
