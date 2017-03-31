@@ -30,6 +30,8 @@
     padding: 5px;
     text-align: center;
     border-radius: 3px;
+    width: 100px;
+    margin: 5px auto;
   }
   .offer-delivery {
     background-color: #003c72;
@@ -37,6 +39,9 @@
     padding: 5px;
     text-align: center;
     border-radius: 3px;
+    width: 100px;
+        margin: 5px auto;
+
   }
   .offer-stars {
     text-align: center;
@@ -44,5 +49,6 @@
 }
 
 .offer-selected {
-  background-color: #c6f4ff;
+      background-color: #75e4ff;
+    border: 2px solid #006ed2;
 }
