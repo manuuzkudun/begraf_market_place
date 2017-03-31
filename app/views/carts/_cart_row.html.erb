@@ -1,22 +1,30 @@
-<div class="order-product">
-  <div class="cart-product-property">
-  <%= cl_image_tag order_product.image, height: 50, width: 50, crop: :fill %>
-<!--     <img src="http://placehold.it/50x50"> -->
+<% shop_product = order_product.shop_product %>
+
+<div class="cart-product">
+  <div class="cart-product-image">
+    <%= cl_image_tag order_product.image, height: 150, width: 150, crop: :fill %>
+  </div>
+  <div class="cart-product-general-data">
+    <h4><%= shop_product.product.product_category.name %></h4>
+    <p><%= shop_product.shop.name %></p>
+      <div class="offer-stars">
+        <% (1..5).to_a.sample.times do %>
+          <i class="fa fa-star" aria-hidden="true"></i>
+        <% end %>
+      </div>
+      <p class="offer-delivery"><%= shop_product.delivery_days %> days</p>
+      <p class="offer-price"><%= shop_product.price %>&euro;</p>
   </div>
   <div class="cart-product-property">
-    <p>Product</p>
-    <p><%= order_product.shop_product.product.product_category.name %></p>
+    <% shop_product.product.product_category.product_properties.each do |property| %>
+      <p><strong><%= property.name %></strong>: <%= shop_product.product[property.name.to_sym] %></p>
+    <% end %>
   </div>
-  <div class="cart-product-property">
-    <p>Deleivery days</p>
-    <p><%= order_product.shop_product.delivery_days %> days</p>
-  </div>
-  <div class="cart-product-property">
-    <p>Price</p>
-    <p><%= order_product.shop_product.price %>&euro;</p>
-  </div>
-  <div>
-    <%= link_to "Delete", order_product, { data: { confirm: "Are you sure you wish to delete the product '#{order_product.shop_product.product.product_category.name }' from your cart?" }, class: "btn btn-danger btn-xs", method: :delete, remote: true } %>
+  <div style="align-self: flex-start;">
+    <%= link_to  order_product, { data: { confirm: "Are you sure you wish to delete the product '#{order_product.shop_product.product.product_category.name }' from your cart?" }, class: "btn btn-danger btn-xs", method: :delete, remote: true } do %>
+      Delete
+    <i class="fa fa-times" aria-hidden="true"></i>
+    <% end %>
   </div>
 
 </div>
