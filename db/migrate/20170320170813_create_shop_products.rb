@@ -3,7 +3,6 @@ class CreateShopProducts < ActiveRecord::Migration[5.0]
     create_table :shop_products do |t|
       t.references :shop, foreign_key: true, index: true
       t.references :product, foreign_key: true, index: true
-      t.integer :price
       t.boolean :avalaible
       t.integer :delivery_days
 

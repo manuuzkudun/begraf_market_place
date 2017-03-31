@@ -19,6 +19,7 @@ gem 'autoprefixer-rails'
 gem 'cartesian'
 gem 'cloudinary'
 gem 'carrierwave', '~> 0.11.2'
+gem 'money-rails'
 
 group :development, :test do
   gem 'binding_of_caller'

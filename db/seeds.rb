@@ -51,7 +51,7 @@ shop3 = Shop.create name: 'Printrus', email: 'printrus@domain.com', address: 'te
 Product.all.each do |product|
   Shop.all.each do |shop|
     ShopProduct.create product: product, shop: shop,
-      avalaible: true, delivery_days: rand(7), price: rand(200)
+      avalaible: true, delivery_days: rand(7), price: rand(100.00..500.00).round(2)
   end
 end
 
