@@ -6,6 +6,7 @@ class CreateShops < ActiveRecord::Migration[5.0]
       t.string :address
       t.string :telephone
       t.string :nif
+      t.float :rating
 
       t.timestamps
     end

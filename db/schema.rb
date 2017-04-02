@@ -103,6 +103,7 @@ ActiveRecord::Schema.define(version: 20170331081409) do
     t.string   "address"
     t.string   "telephone"
     t.string   "nif"
+    t.float    "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

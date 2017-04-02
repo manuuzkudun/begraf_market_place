@@ -10,10 +10,10 @@ class OrderProductsController < ApplicationController
     @order_product.price = @shop_product.price
     @order_product.delivery_days = @shop_product.delivery_days
     if @order_product.save
-      flash[:success] = "Success"
+      flash[:success] = "#{@shop_product.product.product_category.name} added to the shopping cart"
       session[:order_id] = @order.id
     else
-      flash[:error] = "Error"
+      flash[:error] = "There was an error"
     end
     redirect_to :root
   end
