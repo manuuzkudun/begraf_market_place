@@ -1,6 +1,6 @@
 <h3 class="section-heading"><%= @product_catecory.question %></h3>
 
-<%= form_tag "/offers", remote: true, id: "product-form" do %>
+<%= form_tag offers_path, method: 'get', remote: true, id: "product-form" do %>
   <% @product_properties.each do |property| %>
     <div class="property">
       <h4 class="property-question"><%= property.question %></h4>

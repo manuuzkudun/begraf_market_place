@@ -1,10 +1,7 @@
 class OffersController < ApplicationController
-  def find_offers
+  def index
     @product = Product.where(product_params).first
     @offers = ShopProduct.where(product: @product)
-    respond_to do |format|
-      format.js
-    end
   end
 
   def product_params
@@ -12,4 +9,5 @@ class OffersController < ApplicationController
     formatted_params[:quantity] = formatted_params[:quantity].to_i
     formatted_params
   end
+
 end

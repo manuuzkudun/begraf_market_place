@@ -3,8 +3,19 @@ class OrderProductsController < ApplicationController
 
   def create
     @order = current_order
-    @order_product = OrderProduct.create order: @order, shop_product: get_shop_product
-    session[:order_id] = @order.id
+    @shop_product = get_shop_product
+    @order_product = OrderProduct.new order_image_params
+    @order_product.order = current_order
+    @order_product.shop_product = @shop_product
+    @order_product.price = @shop_product.price
+    @order_product.delivery_days = @shop_product.delivery_days
+    if @order_product.save
+      flash[:success] = "Success"
+      session[:order_id] = @order.id
+    else
+      flash[:error] = "Error"
+    end
+    redirect_to :root
   end
 
   def destroy
@@ -14,27 +25,15 @@ class OrderProductsController < ApplicationController
     @order_products = @order.order_products
   end
 
-  def update
-    @order_product = OrderProduct.find(params[:id])
-    if @order_product.update_attributes(order_product_image_params)
-      @order_product.save
-      redirect_to :root
-      flash[:success] = "Welcome to the Sample App!"
-    else
-      redirect_to :root
-    end
-  end
-
   private
 
-  def get_shop_product
-    shop_product_params = params.require(:offer).permit(:id)
-    ShopProduct.where(shop_product_params).first
-  end
-
-  def order_product_image_params
+  def order_image_params
     params.require(:order_product).permit(:image, :image_cache)
   end
 
+  def get_shop_product
+    shop_product_params = params.require(:order_product).permit(:shop_product_id)
+    ShopProduct.where(shop_product_params).first
+  end
 
 end

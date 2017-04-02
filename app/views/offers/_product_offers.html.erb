@@ -1,6 +1,6 @@
 <h3 class="section-heading">Choose one of the offers:</h3>
 
-<%= form_tag "/order_products", remote: true do %>
+<%= form_tag new_image_upload_path, method: 'get', remote: true do %>
   <div class="offer-list">
     <% @offers.each do |offer| %>
       <div class="offer">
