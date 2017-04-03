@@ -10,8 +10,12 @@
     <!-- Different navigation if login or not -->
     <% if user_signed_in? %>
 
-      <div id="shopping-cart-notify">
+      <div id="shopping-cart-notify" style="margin-right: 10px;">
         <%= render 'shared/shopping_cart_notify' %>
+      </div>
+
+      <div id="checkout-notify" style="margin-right: 20px;">
+        <%= render 'shared/checkout_notify' %>
       </div>
 
       <!-- Profile picture and dropdown -->

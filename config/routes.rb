@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   resources :image_upload, only: [:new]
   resources :order_products, only: [:create, :destroy]
   resource :cart, only: [:show]
+  resources :checkout, only: [:index]
   root to: 'product_categories#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

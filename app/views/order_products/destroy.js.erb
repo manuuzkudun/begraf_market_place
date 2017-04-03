@@ -1,1 +1,3 @@
-$(".shopping-cart").html("<%= escape_javascript(render 'carts/shopping_cart') %>")
+$(".shopping-cart").html("<%= escape_javascript(render 'carts/shopping_cart') %>");
+$("#shopping-cart-notify").html("<%= escape_javascript(render 'shared/shopping_cart_notify') %>");
+$("#checkout-notify").html("<%= escape_javascript(render 'shared/checkout_notify') %>");

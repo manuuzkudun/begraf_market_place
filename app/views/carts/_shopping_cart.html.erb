@@ -12,7 +12,7 @@
   <% end %>
   <div class="order-products-summary">
     <span style="margin-right: 40px;">Total = <%= humanized_money_with_symbol(@order.total_amount) %></span>
-    <%= link_to "Go to checkout", "#", class: "btn btn-primary btn-sm" %>
+    <%= link_to "Go to checkout", checkout_index_path, class: "btn btn-primary btn-sm" %>
   </div>
   </div>
 <% end %>
