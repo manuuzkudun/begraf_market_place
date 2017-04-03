@@ -4,6 +4,9 @@
   <div class="offer-list">
     <% @offers.each do |offer| %>
       <div class="offer">
+        <div class="offer-check-icon">
+          <i class="fa fa-check-circle" aria-hidden="true"></i>
+        </div>
         <h4 class="offer-shop"><%= offer.shop.name %></h4>
         <div class="offer-shop-rating">
           <% offer.shop.rating.floor.times do %>
