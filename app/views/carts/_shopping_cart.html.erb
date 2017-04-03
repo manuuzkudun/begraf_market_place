@@ -11,7 +11,8 @@
     <%= render 'carts/cart_row', order_product: order_product %>
   <% end %>
   <div class="order-products-summary">
-    Total = <%= 500 %>       <%= link_to "Go to checkout", "#", class: "btn btn-primary" %>
+    <span style="margin-right: 40px;">Total = <%= humanized_money_with_symbol(@order.total_amount) %></span>
+    <%= link_to "Go to checkout", "#", class: "btn btn-primary btn-sm" %>
   </div>
   </div>
 <% end %>
