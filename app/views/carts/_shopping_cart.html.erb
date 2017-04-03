@@ -4,8 +4,14 @@
   </p>
 <% else %>
   <div class="order-product-list">
+    <div class="order-products-pres">
+    You have <span class="order-products-quantity"><%= @order_products.size %> items</span> in your cart:
+  </div>
   <% @order_products.each do |order_product| %>
     <%= render 'carts/cart_row', order_product: order_product %>
   <% end %>
+  <div class="order-products-summary">
+    Total = <%= 500 %>       <%= link_to "Go to checkout", "#", class: "btn btn-primary" %>
+  </div>
   </div>
 <% end %>
