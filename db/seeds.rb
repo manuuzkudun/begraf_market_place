@@ -37,15 +37,11 @@ end
 
 end
 
-
-shop1 = Shop.create name: 'Cool shop', email: 'cool-shop@domain.com', address: 'test address',
-  telephone: '697697680', nif: 'jyfjfyyu', rating: 4.0
-
-shop2 = Shop.create name: 'Lisbon print', email: 'lisbon-print@domain.com', address: 'test 2 address',
-  telephone: '698897680', nif: 'jiiifjfyyu', rating: 4.5
-
-shop3 = Shop.create name: 'Printrus', email: 'printrus@domain.com', address: 'test 3 address',
-  telephone: '698897680', nif: 'jikghfjfyyu', rating: 3.0
+8.times do
+  Shop.create name: Faker::Company.name, email: Faker::Internet.email,
+  address: Faker::Address.street_address, telephone: Faker::PhoneNumber.phone_number,
+  nif: Faker::Company.ein, rating: rand(1.0..5.0).round(2)
+end
 
 
 Product.all.each do |product|

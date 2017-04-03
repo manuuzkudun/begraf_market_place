@@ -21,6 +21,7 @@ gem 'cloudinary'
 gem 'carrierwave', '~> 0.11.2'
 gem 'money-rails'
 gem 'stripe'
+gem 'faker'
 
 group :development, :test do
   gem 'binding_of_caller'
