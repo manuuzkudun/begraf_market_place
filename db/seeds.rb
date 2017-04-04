@@ -1,9 +1,10 @@
 require_relative 'business_cards'
 require_relative 'flyers'
 require_relative 'banners'
+require_relative 'posters'
 require_relative 'seed_helper'
 
-[@business_cards_data, @flyers_data, @banners_data].each do |product_category|
+[@business_cards_data, @flyers_data, @banners_data, @posters_data].each do |product_category|
 
   category = ProductCategory.create name: product_category[:name],
     image_url: product_category[:image_url], question: product_category[:question]
@@ -22,7 +23,7 @@ require_relative 'seed_helper'
 end
 
 
-[@business_cards_data, @flyers_data, @banners_data].each do |product_data|
+[@business_cards_data, @flyers_data, @banners_data, @posters_data].each do |product_data|
   combinations = get_combinations(product_data)
   property_names = product_data[:properties].map { |property| property[:name] }
   product_values_array = get_product_values_hash(combinations, property_names)
