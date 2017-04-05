@@ -7,7 +7,15 @@ class Order < ApplicationRecord
   #before_save :update_total_amount
 
   def total_amount
-    order_products.collect { |order_product| order_product.price }.sum
+    if order_products.any?
+      order_products.collect { |order_product| order_product.price }.sum
+    else
+      Money.new(0, 'EUR')
+    end
+  end
+
+  def total_amount_cents
+    total_amount.fractional
   end
 
   private
@@ -17,7 +25,7 @@ class Order < ApplicationRecord
   end
 
   def update_total_amount
-    self[:total_amount] = total_amount
+    self[:total_amount_cents] = total_amount
   end
 
 end

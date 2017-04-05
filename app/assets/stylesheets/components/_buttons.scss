@@ -1,0 +1,10 @@
+.button-bordered {
+  border: $blue 2px solid;
+  padding: 5px;
+  border: #006ed2 2px solid;
+  border-radius: 3px;
+  font-weight: 300;
+  &:hover {
+    text-decoration: none;
+  }
+}

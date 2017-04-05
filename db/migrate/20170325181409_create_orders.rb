@@ -4,6 +4,8 @@ class CreateOrders < ActiveRecord::Migration[5.0]
       t.references :order_status, foreign_key: true, index: true
       t.references :user, foreign_key: true, index: true
       t.monetize :total_amount, currency: { present: false }
+      t.string :address
+      t.json :payment
 
       t.timestamps
     end

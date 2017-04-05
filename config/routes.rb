@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   resources :image_upload, only: [:new]
   resources :order_products, only: [:create, :destroy]
   resource :cart, only: [:show]
-  resources :checkout, only: [:index]
+  resources :payments, only: [:new, :create, :show]
   root to: 'product_categories#index'
 end

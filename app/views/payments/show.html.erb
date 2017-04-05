@@ -1,0 +1,6 @@
+<h1>Payment confirmation</h1>
+<p>Order ID: #<%= @order.id %></p>
+<p>Order status: <%= @order.order_status.name %></p>
+<p>Order customer: <%= @order.user.email %></p>
+<p>Order total amount: <%= humanized_money_with_symbol(@order.total_amount) %></p>
+
