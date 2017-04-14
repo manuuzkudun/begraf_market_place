@@ -23,9 +23,15 @@ gem 'money-rails'
 gem 'stripe'
 gem 'faker'
 
+
+group :test do
+  gem 'capybara', '2.7.1'
+end
+
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
+  gem 'rspec-rails', '3.5.0'
 
   # gem 'pry-byebug'
   gem 'pry-rails'
