@@ -9,19 +9,6 @@
 }
 
 
-
-.property {
-
-}
-
-
-.property-value-image {
-  max-width: 100%;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  border-radius: 3px;
-
-}
-
 .property-question {
   color: #003c72;
 }
@@ -32,25 +19,21 @@
 .property-values-images {
   display: flex;
   justify-content: flex-start;
-  .property-value {
-    width: 150px;
+  .property-value-image {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    border-radius: 3px;
+    padding: 5px;
     margin: 0 20px;
     &.selected {
-      img {
-        border: #003c72 solid 2px;
-        border-radius: 0;
-        border-top-left-radius: 3px;
-        border-top-right-radius: 3px;
-      }
-      p {
-        background-color: #003c72;
+      background-color: #003c72;
+      .property-value-image-caption > p {
         color: white;
-            border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
       }
     }
-    p {
+    .property-value-image-caption {
       padding: 5px;
+      padding-top: 20px;
+      width: 150px;
       text-align: center;
       input[type=radio] {
         display: none;

@@ -32,7 +32,7 @@ class OrderProductsController < ApplicationController
   end
 
   def get_shop_product
-    shop_product_params = params.require(:order_product).permit(:shop_product_id)
+    shop_product_params = params.require(:order_product).permit(:id)
     ShopProduct.where(shop_product_params).first
   end
 

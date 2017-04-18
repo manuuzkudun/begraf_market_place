@@ -1,19 +1,45 @@
-<h1>Your purchase</h1>
+<div class="container">
+  <h2>Your purchase</h2>
 
 <%= form_tag payments_path do %>
-  <article>
-    <label class="amount">
-      <span>Amount: <%= humanized_money_with_symbol(@order.total_amount) %></span>
-    </label>
-  </article>
+  <table class="checkout-product-list" style="margin-bottom: 40px;">
+    <tr>
+      <th>Product</th>
+      <th>Shop</th>
+      <th>price</th>
+      <th>Delivery</th>
+    </tr>
+    <% @order.order_products.each do |order_product| %>
+      <tr>
+        <td><%= order_product.shop_product.product.product_category.name %></td>
+        <td><%= order_product.shop_product.shop.name %></td>
+        <td><%= humanized_money_with_symbol(order_product.shop_product.price) %></td>
+        <td>
+            <%= order_product.shop_product.delivery_days %>
+            <%= "day".pluralize(order_product.shop_product.delivery_days) %>
+        </td>
+      </tr>
+    <% end %>
+    <tr>
+    </tr>
+  </table>
 
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-    data-name="BeGraf Print Marketplace"
-    data-email="<%= current_user.email %>"
-    data-description="Order ID: #<%= @order.id%>"
-    data-amount="<%= @order.total_amount_cents %>"
-    data-currency="<%= @order.total_amount.currency %>">
-  </script>
+  <div style="display: flex; justify-content: center;align-items: center;">
+    <div class="checkout-total" style="margin-right: 20px; font-size: 22px;">
+     Total amount: <%= humanized_money_with_symbol(@order.total_amount) %>
+   </div>
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+      data-name="BeGraf Print Marketplace"
+      data-email="<%= current_user.email %>"
+      data-description="Order ID: #<%= @order.id%>"
+      data-amount="<%= @order.total_amount_cents %>"
+      data-currency="<%= @order.total_amount.currency %>">
+    </script>
+  </div>
+
 
 <% end %>
+</div>
+
+

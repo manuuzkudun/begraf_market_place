@@ -1,11 +1,12 @@
 <div class="property-values-images">
   <% property.property_values.each_with_index do |property_value, index| %>
-    <div class="property-value">
-      <%= cl_image_tag property_value.image_url, height: 120, width: 150, crop: :fill, class: "property-value-image" %>
-      <p><input type="radio" name="product[<%= property.name %>]"
-        value="<%= property_value.value %>" >
-        <%= property_value.value.capitalize %>
-      </p>
+    <div class="property-value-image">
+      <%= cl_image_tag property_value.image_url, height: 120, width: 150, crop: :fill %>
+      <div class="property-value-image-caption">
+        <input type="radio" name="product[<%= property.name %>]"
+          value="<%= property_value.value %>" <%= 'checked' if index.zero? %> >
+        <p><%= property_value.value.capitalize %></p>
+      </div>
     </div>
   <% end %>
 </div>

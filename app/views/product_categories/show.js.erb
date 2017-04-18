@@ -7,9 +7,15 @@ $('html, body').animate({
  }, 1000);
 
 
-$(".property-value > img").click( function(event) {
-  var selectedProp = $(event.target).parent();
-  selectedProp.siblings().removeClass("selected");
-  selectedProp.addClass("selected");
-  $(selectedProp).find("p >input[type=radio]").prop("checked", true);
+$(".property-value-image").click( function(event) {
+  var selectedValue= $(event.target).closest(".property-value-image")
+  $(selectedValue).find("input[type=radio]").prop("checked", true);
+  selectedValue.siblings().removeClass("selected");
+  selectedValue.addClass("selected");
 })
+
+
+var selectedValue = $(".property-value-image input:checked").closest(".property-value-image");
+selectedValue.siblings().removeClass("selected");
+selectedValue.addClass("selected");
+

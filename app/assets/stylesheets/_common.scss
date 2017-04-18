@@ -12,6 +12,14 @@ h4 {
   font-size: 20px;
 }
 
+a:link, a:hover, a:active, a:visited {
+  text-decoration: none;
+}
+
+th, td {
+    padding: 5px 15px;
+}
+
 .section-heading {
   text-align: center;
   color: #006ed2;

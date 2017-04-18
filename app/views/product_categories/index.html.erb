@@ -1,15 +1,18 @@
 <div class="container">
-    <h3 class="section-heading">Qual material você deseja?</h3>
+
+  <h3 class="section-heading">Qual material você deseja?</h3>
 
   <section id="product-categories">
     <% @product_categories.each do |product_category| %>
       <div class="product-category">
-        <div class="product-category-card">
-          <%= link_to cl_image_tag(product_category.image_url, height: 150, width: 200, crop: :fill),
-            { controller: "product_categories", action: "show", id: product_category.id, remote: true } %>
+          <%= link_to product_category_path(product_category),
+            id: "product-category-#{product_category.id}", remote: true do %>
+            <%= cl_image_tag product_category.image_url, height: 150, width: 200, crop: :fill %>
+            <div class="product-category-name">
+              <%= product_category.name %>
+            </div>
+          <% end %>
         </div>
-        <h2 class="product-category-name"><%= product_category.name %></h2>
-      </div>
     <% end %>
   </section>
 
