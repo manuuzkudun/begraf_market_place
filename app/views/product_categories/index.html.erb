@@ -1,10 +1,8 @@
 <div class="container">
-<script src="https://fast.wistia.com/embed/medias/i5rq54jj3i.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_embed wistia_async_i5rq54jj3i" style="height:360px;width:640px">&nbsp;</div>
-  <h3 class="section-heading">Qual material você deseja?</h3>
-
+      <h3 class="section-heading">Qual material você deseja?</h3>
   <section id="product-categories">
-    <% @product_categories.each do |product_category| %>
-      <div class="product-category">
+      <% @product_categories.each do |product_category| %>
+        <div class="product-category">
           <%= link_to product_category_path(product_category),
             id: "product-category-#{product_category.id}", remote: true do %>
             <%= cl_image_tag product_category.image_url, height: 150, width: 200, crop: :fill %>
@@ -13,11 +11,10 @@
             </div>
           <% end %>
         </div>
-    <% end %>
+      <% end %>
   </section>
-
   <section id="properties-form"></section>
   <section id="product-offers"></section>
   <section id="image-upload-form"></section>
-
 </div>
+
