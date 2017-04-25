@@ -24,14 +24,18 @@ gem 'stripe'
 gem 'faker'
 
 
+
 group :test do
-  gem 'capybara', '2.13.0'
+  gem "capybara"
+  gem "selenium-webdriver"
+  gem "factory_girl_rails", "~> 4.0"
 end
 
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
-  gem 'rspec-rails', '3.5.0'
+  gem "database_cleaner"
+  gem "rspec-rails"
 
   # gem 'pry-byebug'
   gem 'pry-rails'
