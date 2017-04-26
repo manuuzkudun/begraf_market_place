@@ -1,7 +1,8 @@
 <div class="container">
   <section id="presentation" style="display: flex; justify-content: center;">
     <div class="presentation-text">
-        <h1 class="section-heading">Compare preços e imprima mais barato</h1>
+        <h1>BeGraf</h1>
+        <h2>Ajuda-te a economizar tempo e dinheiro com comparações de gráficas locais para seus materiais impressos</h2>
         <div class="presentation-cta">
           <%= link_to "Start Using Now!", product_categories_path, :class => "btn btn-primary" %>
         </div>
@@ -10,37 +11,7 @@
       <div class="wistia_embed wistia_async_i5rq54jj3i" style="height:281px;width:500px">&nbsp;</div>
     </div>
   </section>
-  <section id="features">
-    <div class="feature-list">
-      <div class="feature">
-      <div class="feature-icon">
-        <i class="fa fa-clock-o" aria-hidden="true"></i>
-      </div>
-      <div class="feature-text">
-        <h3>Simples</h3>
-        <p>A BeGraf é um Marketplace de gráficas de impressão. Aqui pode comparar preços e tempos de entrega de diferentes gráficas para conseguir o melhor para si!</p>
-      </div>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">
-        <i class="fa fa-clock-o" aria-hidden="true"></i>
-      </div>
-      <div class="feature-text">
-        <h3>Fácil</h3>
-        <p>Basta apenas escolher o que precisa, com que especificações e quantidade. Escolher a opção mediante os resultados apresentados e encomendar.</p>
-      </div>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">
-        <i class="fa fa-clock-o" aria-hidden="true"></i>
-      </div>
-      <div class="feature-text">
-        <h3>Rápido</h3>
-        <p>Entregamos na morada pedida ou se não tiver disponibilidade podemos deixar em um dos nossos pickup point partners perto de si.</p>
-      </div>
-    </div>
-    </div>
-  </section>
+  <%= render 'pages/features' %>
 </div>
 
 <script src="https://fast.wistia.com/embed/medias/i5rq54jj3i.jsonp" async></script>
