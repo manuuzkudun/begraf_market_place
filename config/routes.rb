@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :product_categories, only: [:index, :show]
+  resources :product_categories, only: [:index], path: 'products'
+  resources :product_properties, only: [:index]
   resources :offers, only: [:index]
   resources :image_upload, only: [:new]
   resources :order_products, only: [:create, :destroy]

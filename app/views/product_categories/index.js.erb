@@ -1,0 +1,15 @@
+$("#app-content").html("<%= escape_javascript(render('product_categories')) %>").hide();
+$("#app-content").fadeIn(1000);
+
+$(".next-section-button").hide();
+
+$(".product-category").click( function(event) {
+    var product_category = event.currentTarget;
+    $(product_category).siblings().removeClass("product-category-selected");
+    $(product_category).addClass("product-category-selected");
+    $(product_category).find("input[type=radio]").prop("checked", true);
+    var product_category_name = $(product_category).find(".product-category-name").text();
+    $("#product-category-button").val(product_category_name +  " properties");
+    $(".next-section-button").fadeIn(1000);
+});
+

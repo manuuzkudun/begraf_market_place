@@ -20,7 +20,10 @@
   </div>
   <div class="cart-product-properties">
     <% shop_product.product.product_category.product_properties.each do |property| %>
-      <p><span class="cart-product-property"><%= property.name.split('_').join(' ').capitalize %></span>: <%= shop_product.product[property.name.to_sym] %></p>
+      <p>
+        <span class="cart-product-property"><%= property.name.split('_').join(' ').capitalize %>:</span>
+        <span class="cart-product-property-value"><%= shop_product.product[property.name.to_sym] %></span>
+      </p>
     <% end %>
   </div>
   <div style="align-self: flex-start;">

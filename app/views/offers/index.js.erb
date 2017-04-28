@@ -1,15 +1,18 @@
-$("#product-offers").html("");
-$("#image-upload-form").html("");
-$("#product-offers").html("<%= escape_javascript(render('product_offers')) %>");
-$('html, body').animate({
-  scrollTop: $("#product-offers").offset().top
- }, 1000);
+$( document ).ready(function() {
+  console.log("j,nb,jbn,jnb,jn")
+  $("#app-content").fadeOut(500, function() {
+    $("#app-content").html("<%= escape_javascript(render('product_offers')) %>").hide();
+    $("#app-content").fadeIn(500);
+    $(".next-section-button").hide();
 
-$("#product-find-button").hide();
-
-$(".offer").click( function(event) {
-  var offer = event.currentTarget;
-  $(offer).siblings().removeClass("offer-selected");
-  $(offer).addClass("offer-selected");
-  $(offer).find("input[type=radio]").prop("checked", true);
+    $(".offer").click( function(event) {
+      var offer = event.currentTarget;
+      $(offer).siblings().removeClass("offer-selected");
+      $(offer).addClass("offer-selected");
+      $(offer).find("input[type=radio]").prop("checked", true);
+      $(".next-section-button").fadeIn(1000);
+    });
+  });
 });
+
+

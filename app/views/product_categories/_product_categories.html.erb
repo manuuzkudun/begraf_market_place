@@ -1,0 +1,27 @@
+<section id="product-categories">
+  <div class="container">
+    <h3 class="section-heading">Qual material você deseja?</h3>
+    <%= form_tag product_properties_path, method: 'get', remote: true, id: "product-category" do %>
+      <div class="product-category-list">
+        <% @product_categories.each do |product_category| %>
+          <div class="product-category">
+            <div class="product-category-image">
+              <%= cl_image_tag product_category.image_url, height: 150, width: 200, crop: :fill %>
+              <div class="product-category-check">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="product-category-name">
+              <%= product_category.name %>
+            </div>
+            <input type="radio" name="product_category[id]" value="<%= product_category.id %>">
+          </div>
+        <% end %>
+      </div>
+      <div class="next-section-button">
+        <span class="next-section-button-text">Next:</span>
+        <input type="submit" value="product properties" class="btn btn-primary" id="product-category-button">
+      </div>
+    <% end %>
+  </div>
+</section>

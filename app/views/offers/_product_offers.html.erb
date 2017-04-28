@@ -1,31 +1,33 @@
-<h3 class="section-heading">Choose one of the offers:</h3>
-
-<%= form_tag new_image_upload_path, method: 'get', remote: true do %>
-  <div class="offer-list">
-    <% @offers.each do |offer| %>
-      <div class="offer">
-        <div class="offer-check-icon">
-          <i class="fa fa-check-circle" aria-hidden="true"></i>
-        </div>
-        <h4 class="offer-shop"><%= offer.shop.name %></h4>
-        <div class="offer-shop-rating">
-          <% offer.shop.rating.floor.times do %>
-            <i class="fa fa-star" aria-hidden="true"></i>
-          <% end %>
-          <% (5 - offer.shop.rating.floor).times do %>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
-          <% end %>
-        </div>
-
-        <p class="offer-price"><%= humanized_money_with_symbol(offer.price) %></p>
-        <p class="offer-delivery"><%= offer.delivery_days %> days</p>
-        <input type="radio" name="offer[id]" value="<%= offer.id %>" >
+<section id="product-offers-section">
+  <div class="container">
+    <h3 class="section-heading">Choose one of the offers:</h3>
+    <%= form_tag new_image_upload_path, method: 'get', remote: true do %>
+      <div class="offer-list">
+        <% @offers.each do |offer| %>
+          <div class="offer">
+            <div class="offer-check-icon">
+              <i class="fa fa-check-circle" aria-hidden="true"></i>
+            </div>
+            <h4 class="offer-shop"><%= offer.shop.name %></h4>
+            <div class="offer-shop-rating">
+              <% offer.shop.rating.floor.times do %>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              <% end %>
+              <% (5 - offer.shop.rating.floor).times do %>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+              <% end %>
+            </div>
+            <p class="offer-price"><%= humanized_money_with_symbol(offer.price) %></p>
+            <p class="offer-delivery">Delivery in <%= pluralize(offer.delivery_days, 'day') %></p>
+            <input type="radio" name="offer[id]" value="<%= offer.id %>" >
+          </div>
+        <% end %>
+      </div>
+      <div class="next-section-button">
+        <span class="next-section-button-text">Next:</span>
+        <input id="upload-image-button" type="submit" value="Add an image file" class="btn btn-primary">
       </div>
     <% end %>
   </div>
+</section>
 
-  <div class="next-section-button">
-    <input id="upload-image-button" type="submit" value="Add an image file" class="btn btn-primary">
-  </div>
-
-<% end %>

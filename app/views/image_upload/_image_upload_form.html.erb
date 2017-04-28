@@ -1,11 +1,16 @@
-<h3 class="section-heading">Add a image file</h3>
-<div style="display: flex; justify-content: center;">
-  <%= simple_form_for @order_product, url: order_products_path, method: :post  do |f| %>
-    <%= f.input_field :image, input_html: { class: "btn btn-primary" } %>
-    <%= f.input_field :image_cache, as: :hidden %>
-    <%= f.hidden_field :id, value: @shop_product.id %>
-    <div class="next-section-button">
-      <%= f.submit "Add to cart", class: "btn btn-primary" %>
+<section id="image-upload-section">
+  <div class="container">
+    <h3 class="section-heading">Add a image file</h3>
+    <div class="image-upload-form">
+      <%= simple_form_for @order_product, url: order_products_path, method: :post  do |f| %>
+        <%= f.input_field :image, input_html: { class: "btn btn-primary" } %>
+        <%= f.input_field :image_cache, as: :hidden %>
+        <%= f.hidden_field :id, value: @shop_product.id %>
+        <div class="next-section-button">
+          <span class="next-section-button-text">Next:</span>
+          <%= f.submit "Add to cart", class: "btn btn-primary" %>
+        </div>
+      <% end %>
     </div>
-  <% end %>
-</div>
+  </div>
+</section>

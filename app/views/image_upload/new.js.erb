@@ -1,6 +1,6 @@
-$("#image-upload-form").html("<%= escape_javascript(render 'image_upload/image_upload_form') %>");
-$('html, body').animate({
-  scrollTop: $("#image-upload-form").offset().top
- }, 1000);
-
-$("#upload-image-button").hide();
+$( document ).ready(function() {
+  $("#app-content").fadeOut(500, function() {
+    $("#app-content").html("<%= escape_javascript(render('image_upload_form')) %>").hide();
+    $("#app-content").fadeIn(500);
+  });
+});

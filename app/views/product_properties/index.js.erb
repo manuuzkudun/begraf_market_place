@@ -1,0 +1,23 @@
+$( document ).ready(function() {
+
+  $("#app-content").fadeOut(500, function() {
+    $("#app-content").html("<%= escape_javascript(render('properties_form')) %>").hide();
+    $("#app-content").fadeIn(500);
+
+    $(".property-value-image").click( function(event) {
+      var selectedValue= $(event.target).closest(".property-value-image")
+      $(selectedValue).find("input[type=radio]").prop("checked", true);
+      selectedValue.siblings().removeClass("selected");
+      selectedValue.addClass("selected");
+    });
+
+    var selectedValue = $(".property-value-image input:checked").closest(".property-value-image");
+    selectedValue.siblings().removeClass("selected");
+    selectedValue.addClass("selected");
+
+  });
+});
+
+
+
+
