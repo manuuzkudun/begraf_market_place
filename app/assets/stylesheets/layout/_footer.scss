@@ -1,9 +1,21 @@
 // Your footer style
 #footer {
-  text-align: center;
-  margin-top: 60px;
-  background-color: #6da0d2;
-  height: 150px;
-  position: absolute;
+  background-color: #d8edff;
+  height: 120px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-nav {
+  li {
+    list-style-type: none;
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+.footer-copyright {
+  margin-left: 20px;
 }

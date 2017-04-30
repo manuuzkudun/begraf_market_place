@@ -1,8 +1,8 @@
 $( document ).ready(function() {
 
-  $("#app-content").fadeOut(500, function() {
-    $("#app-content").html("<%= escape_javascript(render('properties_form')) %>").hide();
-    $("#app-content").fadeIn(500);
+  $("#Site-content").fadeOut(500, function() {
+    $("#Site-content").html("<%= escape_javascript(render('properties_form')) %>").hide();
+    $("#Site-content").fadeIn(500);
 
     $(".property-value-image").click( function(event) {
       var selectedValue= $(event.target).closest(".property-value-image")

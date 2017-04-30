@@ -27,6 +27,16 @@ th, td {
     padding: 5px 15px;
 }
 
+#Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#Site-content {
+  flex: 1;
+}
+
 .section-heading {
   text-align: center;
   color: #006ed2;
