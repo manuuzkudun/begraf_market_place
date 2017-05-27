@@ -1,0 +1,7 @@
+<div class="property-values-select">
+  <select class="form-control col-2-sm" name="product[<%= property.name %>]">
+    <% property.property_values.each_with_index do |property_value, index| %>
+      <option value="<%= property_value.value %>"><%= property_value.value.capitalize %></option>
+    <% end %>
+  </select>
+</div>
