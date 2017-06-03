@@ -8,3 +8,31 @@
     text-decoration: none;
   }
 }
+
+.btn-begraf{
+  color: #FFF;
+  fill: #FFF;
+  text-transform: uppercase;
+  border: 1px solid $accent-color-one;
+  background: $accent-color-one;
+  transition: background 0.3s ease;
+  &:hover {
+    color: $begraf-color;
+    fill: $begraf-color;
+    text-decoration: none;
+  }
+}
+
+.btn-begraf-inverse {
+  color: $begraf-color;
+  fill: $begraf-color;
+  border: 1px solid $begraf-color;
+  background: #FFF;
+  transition: background 0.3s ease;
+  &:hover {
+    color: #FFF;
+    fill: #FFF;
+    background: $accent-color-one;
+    text-decoration: none;
+  }
+}

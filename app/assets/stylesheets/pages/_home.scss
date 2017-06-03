@@ -1,0 +1,67 @@
+// Text and headers
+body {
+  margin: 0;
+  font-family: $base-font;
+  font-size: 17px;
+  line-height: 1.6em;
+  color: $text-grey;
+}
+
+h1, h2, h3 {
+  font-family: $header-font;
+  margin-bottom: 15px;
+}
+
+
+ // Wrappers
+ .page-wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+ }
+
+ .layout-wrapper {
+  max-width: 410px;
+  padding: 10px 20px 20px 20px;
+  text-align: center;
+  margin-top: 50px !important;
+  margin: 0 auto;
+  background: #FFF;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+ }
+
+ // Padding
+ .padded-top {
+  padding-top: 50px;
+ }
+
+.padded-bottom {
+  padding-bottom: 50px;
+}
+
+.spaced-bottom {
+  margin-bottom: 10px;
+}
+
+.spacer {
+  height: 60px;
+}
+
+// Text Selection and highlight color
+::-moz-selection {
+  text-shadow: none;
+  background: $highlight-color;
+}
+::selection {
+  text-shadow: none;
+  background: $highlight-color;
+}
+img::selection {
+  background: transparent;
+}
+img::-moz-selection {
+  background: transparent;
+}
+body {
+  webkit-tap-highlight-color: $highlight-color;
+}
