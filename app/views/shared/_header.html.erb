@@ -1,0 +1,21 @@
+<header>
+    <div class="container header-home">
+        <!-- Start Row -->
+        <div class="row">
+            <div class="col-sm-6 header-text">
+                <h1>BeGraf</h1>
+                <h2 class="lead">Ajuda-te a economizar tempo e dinheiro com comparações de gráficas locais para seus materiais impressos</h2>
+                <div class="row">
+                    <div class="col-sm-5 col-xs-12 header-cta col-centered">
+                        <%= link_to "Comece a comprar!", product_categories_path, remote: true, :class => "btn btn-lg btn-begraf" %>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5 col-sm-offset-1">
+                <!-- <img class="img-rounded img-responsive" src="banner_image.png"> -->
+                <%= image_tag "banner_image.png", class: " img-responsive img-banner" %>
+            </div>
+        </div>
+        <!--// END Row -->
+    </div>
+</header> 
