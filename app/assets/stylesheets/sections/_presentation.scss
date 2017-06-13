@@ -2,35 +2,6 @@
   background: linear-gradient(white, #d8edff);
 }
 
-#presentation-section {
-  padding: 60px 0;
-}
-
-.presentation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.presentation-text {
-  padding: 0 40px;
-  h1 {
-    color: $darkblue;
-    font-weight: bold;
-    font-size: 50px;
-  }
-  h2 {
-    color: $blue;
-    font-weight: 300;
-    margin-top: 0;
-    line-height: 42px;
-  }
-  .presentation-cta {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-  }
-}
 
 
 /* Features */

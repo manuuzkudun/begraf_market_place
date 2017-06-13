@@ -1,0 +1,44 @@
+.header-home {
+  width: 100%;
+  display: flex;
+  background-color: $begraf-color-tint-lighter;
+  padding: 80px 20px 80px 20px;
+
+}
+
+.col-centered{
+  float: none;
+  margin: 0 auto;
+}
+
+.header-text {
+  padding: 0 40px;
+  h1 {
+    color: $begraf-color;
+    font-weight: bold;
+    font-size: 3em;
+    margin-bottom: 40px;
+  }
+  h2 {
+    color: $begraf-color;
+    font-weight: 400;
+    font-size: 2em;
+    margin-top: 0;
+  }
+
+  @media only screen and (max-width: 500px) {
+  img {
+    margin-top: 50px;
+    }
+  }
+  .header-cta {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.img-banner{
+  padding-right: 30px;
+}

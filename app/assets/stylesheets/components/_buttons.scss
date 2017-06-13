@@ -11,15 +11,14 @@
 
 .btn-begraf{
   color: #FFF;
-  fill: #FFF;
   text-transform: uppercase;
-  border: 1px solid $accent-color-one;
   background: $accent-color-one;
   transition: background 0.3s ease;
   &:hover {
-    color: $begraf-color;
-    fill: $begraf-color;
+    color: white;
+    background-color: $begraf-color-tint;
     text-decoration: none;
+    border: $begraf-color-tint;
   }
 }
 
